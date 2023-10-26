@@ -1,0 +1,125 @@
+name: Python Code Quality
+
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  issues: write
+  packages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+
+      - name: Making the logfile if it does not exist
+        run: python .utils/make_logs.py
+
+      - name: Analysing the code with pylint
+        run: |
+          > code_review/report.txt
+          > code_review/report.json
+          find . -path "./.utils/*" -prune -o -name '*.py' -print \
+          -exec pylint --rcfile ./.pylintrc {} \; \
+          >> code_review/report.txt
+
+      - name: Converting logs into JSON
+        run: python .utils/parse_raw_python.py
+
+      - name: Obtain average_score from JSON
+        id: average_score
+        run: |
+          echo "SCORE=$(jq '.average_score' code_review/report.json)" >> $GITHUB_ENV
+
+        env:
+          CODE_QUALITY: ${{ env.SCORE }}
+          BADGE_PATH: .github/badges/code_quality.svg
+          BRANCH: main
+      
+      - name: Obtain total_errors from JSON
+        id: total_errors
+        run: |
+          echo "ERRORS=$(python .utils/count_errors.py)" >> $GITHUB_ENV
+
+        env:
+          CODE_QUALITY: ${{ env.ERRORS }}
+          BADGE_PATH: .github/badges/total_errors.svg
+          BRANCH: main
+
+        # Create the directory where badges will be saved, if needed
+      - name: Create destination directory for badge
+        env:
+          BADGE_PATH: .github/badges/code_quality.svg
+        run: mkdir -p "${BADGE_PATH%/*}"
+
+        # Use the output from the `average_score` step
+      - name: Generate the badge SVG image
+        uses: emibcn/badge-action@v1
+        id: quality_badge
+        with:
+          label: 'Code Quality Score: '
+          status: ${{ format('{0}/100', env.SCORE) }}
+          color: 'blue'
+          path: .github/badges/code_quality.svg
+          scale: 1.5
+      
+      - name: Generate the badge SVG image
+        uses: emibcn/badge-action@v1
+        id: error_badge
+        with:
+          label: 'Total Errors: '
+          status: ${{ format(env.ERRORS) }}
+          color: 'blue'
+          path: .github/badges/total_errors.svg
+          scale: 1.5
+
+      - name: Upload badge as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: badge
+          path: .github/badges/code_quality.svg
+          if-no-files-found: ignore
+
+      - name: Upload badge as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: badge
+          path: .github/badges/total_errors.svg
+          if-no-files-found: ignore
+
+      - name: Committing logs and badge to the repository
+        if: github.repository != 'sigma-labs-xyz/coursework-template'
+        run: |
+          git config --global user.name "$(git log -n 1 --pretty=format:%an)"
+          git config --global user.email "$(git log -n 1 --pretty=format:%ae)"
+          git pull
+          git add code_review/report.txt code_review/report.json .github/badges/code_quality.svg .github/badges/total_errors.svg
+          git checkout main
+          git diff-index --quiet HEAD || git commit -am "deploy workflow logs"
+          git push

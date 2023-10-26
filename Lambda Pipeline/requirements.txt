@@ -1,0 +1,5 @@
+pandas
+spacy
+rapidfuzz
+python-dotenv
+boto3
