@@ -1,4 +1,4 @@
-# 🧑‍💻 Sigma Labs Coursework
+# 🧑‍💻 PubMed Pipeline Coursework
 
 ## 🛠️ Getting Setup
 
