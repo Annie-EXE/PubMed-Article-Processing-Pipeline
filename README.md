@@ -1,5 +1,7 @@
 # 🧑‍💻 PubMed Pipeline Coursework
 
+Coursework: an ETL pipeline deployed using AWS Lambda, which processes medical article data downloaded from S3.
+
 ## 🛠️ Getting Setup
 
 1. Create and enter a venv
