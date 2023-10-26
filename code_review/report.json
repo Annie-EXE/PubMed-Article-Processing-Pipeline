@@ -1,0 +1,181 @@
+{
+ "files": [
+  {
+   "file_name": "./Local Pipeline/processing_pipeline.py",
+   "errors": [
+    "Local Pipeline/processing_pipeline.py:64:0: C0301: Line too long (155/150) (line-too-long)",
+    "Local Pipeline/processing_pipeline.py:65:0: C0301: Line too long (170/150) (line-too-long)",
+    "Local Pipeline/processing_pipeline.py:208:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:209:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:210:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:211:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:213:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:214:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)",
+    "Local Pipeline/processing_pipeline.py:19:29: C0103: Argument name \"s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "Local Pipeline/processing_pipeline.py:91:70: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:105:39: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:105:54: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:147:46: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:147:60: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:166:74: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:210:12: W0702: No exception type(s) specified (bare-except)",
+    "Local Pipeline/processing_pipeline.py:219:49: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Local Pipeline/processing_pipeline.py:225:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)",
+    "Local Pipeline/processing_pipeline.py:286:4: W0612: Unused variable 'addresses_df' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:6:0: W0612: Unused variable 'dotenv_values' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:11:0: W0612: Unused variable 'English' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:12:0: W0612: Unused variable 'fuzz' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:13:0: W0612: Unused variable 'extract' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:15:0: W0612: Unused variable 'partial_ratio' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:15:0: W0612: Unused variable 'partial_token_ratio' (unused-variable)",
+    "Local Pipeline/processing_pipeline.py:6:0: W0611: Unused dotenv_values imported from dotenv (unused-import)",
+    "Local Pipeline/processing_pipeline.py:11:0: W0611: Unused English imported from spacy.lang.en (unused-import)",
+    "Local Pipeline/processing_pipeline.py:12:0: W0611: Unused fuzz imported from rapidfuzz (unused-import)",
+    "Local Pipeline/processing_pipeline.py:13:0: W0611: Unused extract imported from rapidfuzz.process_cpp (unused-import)",
+    "Local Pipeline/processing_pipeline.py:15:0: W0611: Unused partial_ratio imported from rapidfuzz.fuzz (unused-import)",
+    "Local Pipeline/processing_pipeline.py:15:0: W0611: Unused partial_token_ratio imported from rapidfuzz.fuzz (unused-import)"
+   ],
+   "score": 61.9
+  },
+  {
+   "file_name": "./Old Code/enrich_data.py",
+   "errors": [
+    "Old Code/enrich_data.py:52:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)",
+    "Old Code/enrich_data.py:9:0: W0612: Unused variable 'full_folder' (unused-variable)",
+    "Old Code/enrich_data.py:80:4: W0612: Unused variable 'aliases_df' (unused-variable)",
+    "Old Code/enrich_data.py:81:4: W0612: Unused variable 'addresses_df' (unused-variable)",
+    "Old Code/enrich_data.py:3:0: W0612: Unused variable 'extract' (unused-variable)",
+    "Old Code/enrich_data.py:3:0: W0612: Unused variable 'extractOne' (unused-variable)",
+    "Old Code/enrich_data.py:4:0: W0612: Unused variable 'Levenshtein' (unused-variable)",
+    "Old Code/enrich_data.py:5:0: W0612: Unused variable 'partial_ratio' (unused-variable)",
+    "Old Code/enrich_data.py:5:0: W0612: Unused variable 'partial_token_ratio' (unused-variable)",
+    "Old Code/enrich_data.py:3:0: W0611: Unused extract imported from rapidfuzz.process_cpp (unused-import)",
+    "Old Code/enrich_data.py:3:0: W0611: Unused extractOne imported from rapidfuzz.process_cpp (unused-import)",
+    "Old Code/enrich_data.py:4:0: W0611: Unused Levenshtein imported from rapidfuzz.distance (unused-import)",
+    "Old Code/enrich_data.py:5:0: W0611: Unused partial_ratio imported from rapidfuzz.fuzz (unused-import)",
+    "Old Code/enrich_data.py:5:0: W0611: Unused partial_token_ratio imported from rapidfuzz.fuzz (unused-import)"
+   ],
+   "score": 76.7
+  },
+  {
+   "file_name": "./Old Code/extract.py",
+   "errors": [
+    "Old Code/extract.py:169:4: W0702: No exception type(s) specified (bare-except)",
+    "Old Code/extract.py:189:8: W0702: No exception type(s) specified (bare-except)",
+    "Old Code/extract.py:63:0: W0612: Unused variable 'get_data_for_specified_article_incl_authors' (unused-variable)"
+   ],
+   "score": 96.7
+  },
+  {
+   "file_name": "./Old Code/flatten_data.py",
+   "errors": [
+    "Old Code/flatten_data.py:32:0: C0301: Line too long (155/150) (line-too-long)",
+    "Old Code/flatten_data.py:33:0: C0301: Line too long (170/150) (line-too-long)",
+    "Old Code/flatten_data.py:9:0: W0612: Unused variable 'full_folder' (unused-variable)",
+    "Old Code/flatten_data.py:104:0: W0612: Unused variable 'create_dataframe' (unused-variable)",
+    "Old Code/flatten_data.py:111:0: W0612: Unused variable 'export_dataframe_to_csv' (unused-variable)",
+    "Old Code/flatten_data.py:136:4: W0612: Unused variable 'nlp' (unused-variable)",
+    "Old Code/flatten_data.py:138:4: W0612: Unused variable 'nlp' (unused-variable)"
+   ],
+   "score": 88.5
+  },
+  {
+   "file_name": "./Old Code/extract_authors.py",
+   "errors": [
+    "Old Code/extract_authors.py:26:0: C0301: Line too long (168/150) (line-too-long)",
+    "Old Code/extract_authors.py:9:4: W0612: Unused variable 'title' (unused-variable)",
+    "Old Code/extract_authors.py:10:4: W0612: Unused variable 'pmid' (unused-variable)",
+    "Old Code/extract_authors.py:11:4: W0612: Unused variable 'year' (unused-variable)",
+    "Old Code/extract_authors.py:13:4: W0612: Unused variable 'keyword_list' (unused-variable)",
+    "Old Code/extract_authors.py:15:4: W0612: Unused variable 'mesh_list' (unused-variable)",
+    "Old Code/extract_authors.py:63:4: E1111: Assigning result of a function call, where the function has no return (assignment-from-no-return)",
+    "Old Code/extract_authors.py:63:4: W0612: Unused variable 'author_data' (unused-variable)"
+   ],
+   "score": 58.6
+  },
+  {
+   "file_name": "./Old Code/rapidfuzz_work.py",
+   "errors": [
+    "Old Code/rapidfuzz_work.py:2:0: W0612: Unused variable 'ast' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:3:0: W0612: Unused variable 'rapidfuzz' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:10:0: W0612: Unused variable 'full_folder' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:43:4: W0612: Unused variable 'aliases_df' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:44:4: W0612: Unused variable 'addresses_df' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:4:0: W0612: Unused variable 'fuzz' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:5:0: W0612: Unused variable 'extract' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:6:0: W0612: Unused variable 'Levenshtein' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:7:0: W0612: Unused variable 'partial_token_ratio' (unused-variable)",
+    "Old Code/rapidfuzz_work.py:2:0: W0611: Unused import ast (unused-import)",
+    "Old Code/rapidfuzz_work.py:3:0: W0611: Unused import rapidfuzz (unused-import)",
+    "Old Code/rapidfuzz_work.py:4:0: W0611: Unused fuzz imported from rapidfuzz (unused-import)",
+    "Old Code/rapidfuzz_work.py:5:0: W0611: Unused extract imported from rapidfuzz.process_cpp (unused-import)",
+    "Old Code/rapidfuzz_work.py:6:0: W0611: Unused Levenshtein imported from rapidfuzz.distance (unused-import)",
+    "Old Code/rapidfuzz_work.py:7:0: W0611: Unused partial_token_ratio imported from rapidfuzz.fuzz (unused-import)"
+   ],
+   "score": 34.8
+  },
+  {
+   "file_name": "./Old Code/test_new_xml_extraction.py",
+   "errors": [
+    "Old Code/test_new_xml_extraction.py:54:0: C0301: Line too long (155/150) (line-too-long)",
+    "Old Code/test_new_xml_extraction.py:55:0: C0301: Line too long (170/150) (line-too-long)",
+    "Old Code/test_new_xml_extraction.py:17:29: C0103: Argument name \"s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "Old Code/test_new_xml_extraction.py:167:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)",
+    "Old Code/test_new_xml_extraction.py:212:4: W0612: Unused variable 'aliases_df' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:213:4: W0612: Unused variable 'addresses_df' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:6:0: W0612: Unused variable 'dotenv_values' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:10:0: W0612: Unused variable 'English' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:12:0: W0612: Unused variable 'extract' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:12:0: W0612: Unused variable 'extractOne' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:13:0: W0612: Unused variable 'Levenshtein' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:14:0: W0612: Unused variable 'partial_ratio' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:14:0: W0612: Unused variable 'partial_token_ratio' (unused-variable)",
+    "Old Code/test_new_xml_extraction.py:6:0: W0611: Unused dotenv_values imported from dotenv (unused-import)",
+    "Old Code/test_new_xml_extraction.py:10:0: W0611: Unused English imported from spacy.lang.en (unused-import)",
+    "Old Code/test_new_xml_extraction.py:12:0: W0611: Unused extract imported from rapidfuzz.process_cpp (unused-import)",
+    "Old Code/test_new_xml_extraction.py:12:0: W0611: Unused extractOne imported from rapidfuzz.process_cpp (unused-import)",
+    "Old Code/test_new_xml_extraction.py:13:0: W0611: Unused Levenshtein imported from rapidfuzz.distance (unused-import)",
+    "Old Code/test_new_xml_extraction.py:14:0: W0611: Unused partial_ratio imported from rapidfuzz.fuzz (unused-import)",
+    "Old Code/test_new_xml_extraction.py:14:0: W0611: Unused partial_token_ratio imported from rapidfuzz.fuzz (unused-import)"
+   ],
+   "score": 85.2
+  },
+  {
+   "file_name": "./Lambda Pipeline/lambda_function.py",
+   "errors": [
+    "Lambda Pipeline/lambda_function.py:64:0: C0301: Line too long (155/150) (line-too-long)",
+    "Lambda Pipeline/lambda_function.py:65:0: C0301: Line too long (170/150) (line-too-long)",
+    "Lambda Pipeline/lambda_function.py:19:29: C0103: Argument name \"s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "Lambda Pipeline/lambda_function.py:91:70: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:105:39: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:105:54: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:147:46: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:147:60: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:166:74: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:191:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)",
+    "Lambda Pipeline/lambda_function.py:204:49: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
+    "Lambda Pipeline/lambda_function.py:210:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)",
+    "Lambda Pipeline/lambda_function.py:273:4: C0103: Variable name \"s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "Lambda Pipeline/lambda_function.py:253:19: W0613: Unused argument 'event' (unused-argument)",
+    "Lambda Pipeline/lambda_function.py:253:26: W0613: Unused argument 'context' (unused-argument)",
+    "Lambda Pipeline/lambda_function.py:281:4: W0612: Unused variable 'aliases_df' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:282:4: W0612: Unused variable 'addresses_df' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:219:0: W0612: Unused variable 'add_column_to_data' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:6:0: W0612: Unused variable 'dotenv_values' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:11:0: W0612: Unused variable 'English' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:12:0: W0612: Unused variable 'fuzz' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:13:0: W0612: Unused variable 'extract' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:15:0: W0612: Unused variable 'partial_ratio' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:15:0: W0612: Unused variable 'partial_token_ratio' (unused-variable)",
+    "Lambda Pipeline/lambda_function.py:6:0: W0611: Unused dotenv_values imported from dotenv (unused-import)",
+    "Lambda Pipeline/lambda_function.py:11:0: W0611: Unused English imported from spacy.lang.en (unused-import)",
+    "Lambda Pipeline/lambda_function.py:12:0: W0611: Unused fuzz imported from rapidfuzz (unused-import)",
+    "Lambda Pipeline/lambda_function.py:13:0: W0611: Unused extract imported from rapidfuzz.process_cpp (unused-import)",
+    "Lambda Pipeline/lambda_function.py:15:0: W0611: Unused partial_ratio imported from rapidfuzz.fuzz (unused-import)",
+    "Lambda Pipeline/lambda_function.py:15:0: W0611: Unused partial_token_ratio imported from rapidfuzz.fuzz (unused-import)"
+   ],
+   "score": 62.1
+  }
+ ],
+ "average_score": 70.6
+}
